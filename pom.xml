@@ -45,12 +45,18 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Lombok -->
+        <!-- ✅ Lombok (compileOnly + annotationProcessor) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.32</version>
-            <scope>provided</scope>
+            <scope>compileOnly</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
+            <scope>annotationProcessor</scope>
         </dependency>
 
         <!-- Test -->
@@ -62,7 +68,6 @@
     </dependencies>
 
     <build>
-        <!-- ✅ Force jar name to demo14.jar -->
         <finalName>demo14</finalName>
 
         <plugins>
